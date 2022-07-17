@@ -7,7 +7,14 @@
     <title>Vite + TS</title>
   </head>
   <body>
+    <hello-world></hello-world>
+    <hello-user id="freds" user="fred"></hello-user>
+    <jolo-input id="input"></jolo-input>
+    <button onclick="document.getElementById('freds').setAttribute('user', document.getElementById('input').value)">GO !!!</button>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/components/hello-world.ts"></script>
+    <script type="module" src="/src/components/hello-user.ts"></script>
+    <script type="module" src="/src/components/jolo-input.ts"></script>
   </body>
 </html>
