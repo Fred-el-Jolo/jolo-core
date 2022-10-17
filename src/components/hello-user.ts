@@ -26,4 +26,6 @@ export class HelloUser extends CustomHtmlElement {
 }
 
 // register <hello-world> with the HelloWorld class
-customElements.define('hello-user', HelloUser);
+export const register = (tagName = 'hello-user') => {
+    customElements.define(tagName, HelloUser);
+};

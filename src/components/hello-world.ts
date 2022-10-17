@@ -15,4 +15,6 @@ export class HelloWorld extends HTMLElement {
 }
 
 // register <hello-world> with the HelloWorld class
-customElements.define('hello-world', HelloWorld);
+export const register = (tagName = 'hello-world') => {
+    customElements.define(tagName, HelloWorld);
+};
