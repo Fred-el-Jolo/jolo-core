@@ -1,31 +1,36 @@
-import { CustomHtmlElement } from "../core/custom-html-element";
+import DynamicHtmlElement from "../core/dynamic-html-element";
 
-export class HelloUser extends CustomHtmlElement {
+export default class HelloUser extends DynamicHtmlElement {
 
     static get observedAttributes(): string[] {
-        return ['user'];
+        return ['user', 'age'];
     }
 
     user: string;
+    age: number | null;
 
     constructor() {
         super();
 
         this.user = '';
+        this.age = null;
         this.propertyUpdateCallback('user', this.updateContent);
+        this.propertyUpdateCallback('age', this.updateContent);
     }
 
     connectedCallback() {
         this.updateContent();
     }
 
+    userTemplate() {
+        return this.user ? ` ${this.user}` : '!!!';
+    }
+
+    ageTemplate() {
+        return this.age ? `, you are ${this.age} years old!` : '';
+    }
 
     updateContent() {
-        this.textContent = `Hello, ${this.user}!`;
+        this.textContent = `Hello${this.userTemplate()}${this.ageTemplate()}`;
     }
 }
-
-// register <hello-world> with the HelloWorld class
-export const register = (tagName = 'hello-user') => {
-    customElements.define(tagName, HelloUser);
-};

@@ -1,4 +1,6 @@
-export class HelloWorld extends HTMLElement {
+import JoloHtmlElement from "../core/jolo-html-element";
+
+export default class HelloWorld extends JoloHtmlElement {
 
     constructor() {
         super();
@@ -11,10 +13,4 @@ export class HelloWorld extends HTMLElement {
     updateContent() {
         this.textContent = 'Hello, World!';
     }
-
 }
-
-// register <hello-world> with the HelloWorld class
-export const register = (tagName = 'hello-world') => {
-    customElements.define(tagName, HelloWorld);
-};

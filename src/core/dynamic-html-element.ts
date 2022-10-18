@@ -1,4 +1,6 @@
-export abstract class CustomHtmlElement extends HTMLElement {
+import JoloHtmlElement from "./jolo-html-element";
+
+export default abstract class DynamicHtmlElement extends JoloHtmlElement {
 
     /**
      * Dynamic props callbacks map

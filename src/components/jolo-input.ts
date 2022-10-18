@@ -1,11 +1,9 @@
-import { CustomHtmlElement } from "../core/custom-html-element";
+import DynamicHtmlElement from "../core/dynamic-html-element";
 
 const template = document.createElement('template');
-template.innerHTML = `
-<input />
-`;
+template.innerHTML = `<input />`;
 
-export class JoloInput extends CustomHtmlElement {
+export default class JoloInput extends DynamicHtmlElement {
 
     static get observedAttributes() {
         return ['value'];
@@ -45,9 +43,8 @@ export class JoloInput extends CustomHtmlElement {
         }
     }
 
-
-
+    getValue() {
+        return this.value;
+    }
 
 }
-
-customElements.define('jolo-input', JoloInput);
