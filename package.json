@@ -10,6 +10,9 @@
     "url": "https://github.com/Fred-el-Jolo/jolo-core.git"
   },
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "README.md",
