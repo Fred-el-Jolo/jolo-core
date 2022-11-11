@@ -1,9 +1,11 @@
 {
   "name": "@fred-el-jolo/core",
   "description": "Core web components & helpers",
-  "keywords": ["webComponent"],
+  "keywords": [
+    "webComponent"
+  ],
   "homepage": "https://github.com/Fred-el-Jolo/jolo-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "Unlicense",
   "repository": {
     "type": "git",
@@ -26,7 +28,6 @@
       "require": "./dist/fred-el-jolo-core.umd.cjs"
     }
   },
-
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
