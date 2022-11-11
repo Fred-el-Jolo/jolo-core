@@ -1,8 +1,29 @@
 {
-  "name": "solid-todo-vanilla",
-  "private": true,
+  "name": "@fred-el-jolo/core",
+  "description": "Core web components & helpers",
+  "keywords": ["webComponent"],
+  "homepage": "https://github.com/Fred-el-Jolo/jolo-core",
   "version": "0.0.0",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fred-el-Jolo/jolo-core.git"
+  },
   "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "UNLICENSE"
+  ],
+  "main": "./dist/fred-el-jolo-core.umd.cjs",
+  "module": "./dist/fred-el-jolo-core.js",
+  "exports": {
+    ".": {
+      "import": "./dist/fred-el-jolo-core.js",
+      "require": "./dist/fred-el-jolo-core.umd.cjs"
+    }
+  },
+
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
