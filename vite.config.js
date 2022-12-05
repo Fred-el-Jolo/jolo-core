@@ -17,5 +17,14 @@ export default defineConfig({
       // the proper extensions will be added
       fileName: 'fred-el-jolo-core'
     },
+    // rollupOptions: {
+    //   input: [
+    //     resolve(_dirname, 'src/components/Hello-user.ts'),
+    //     resolve(_dirname, 'src/components/Hello-world.ts')
+    //   ],
+    //   output: {
+    //     preserveModules: false,
+    //   }
+    // }
   }
 })
